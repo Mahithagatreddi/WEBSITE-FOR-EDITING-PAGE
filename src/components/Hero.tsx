@@ -3,29 +3,18 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import Image from "next/image";
+import { HeroBackground } from "@/components/HeroBackground";
 import { getWhatsAppUrl, siteConfig } from "@/config/site";
 import content from "@/data/content.json";
 
-const heroVideo = content.portfolio[0]?.video ?? "/videos/DZKN2XrAxkU.mp4";
-const heroPoster = content.portfolio[0]?.thumbnail ?? "/photos/DZKN2XrAxkU.jpg";
+// Smaller reel for faster hero load on mobile networks
+const heroVideo = "/videos/DY_GmSLAgQ5.mp4";
+const heroPoster = "/photos/DY_GmSLAgQ5.jpg";
 
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] overflow-hidden">
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={heroPoster}
-          className="h-full w-full object-cover opacity-50"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/30 via-[#0a0a0b]/60 to-[#0a0a0b]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0b]/80 via-transparent to-transparent" />
-      </div>
+      <HeroBackground videoSrc={heroVideo} posterSrc={heroPoster} />
 
       <div className="relative mx-auto flex min-h-[100dvh] max-w-6xl flex-col justify-end px-5 pb-24 pt-32 md:justify-center md:pb-20">
         <motion.div
