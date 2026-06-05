@@ -1,61 +1,99 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { registerVideo, useMediaUnlocked } from "@/components/MediaUnlock";
+import { resolveVideoSrc } from "@/lib/resolve-video";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
-  videoSrc: string;
+  localVideo: string;
+  proxyVideo: string;
   posterSrc: string;
 };
 
-export function HeroBackground({ videoSrc, posterSrc }: Props) {
+export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
+  const [src, setSrc] = useState(localVideo);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
+  const unlocked = useMediaUnlocked();
+  const [status, setStatus] = useState<"loading" | "playing" | "failed">("loading");
+
+  useEffect(() => {
+    let cancelled = false;
+    resolveVideoSrc(localVideo, proxyVideo).then((resolved) => {
+      if (!cancelled) setSrc(resolved);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [localVideo, proxyVideo]);
+
+  const attemptPlay = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.setAttribute("muted", "");
+    video
+      .play()
+      .then(() => setStatus("playing"))
+      .catch(() => setStatus("failed"));
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+    registerVideo(video);
 
-    const tryPlay = () => {
-      video.play().catch(() => {
-        // Autoplay blocked on some browsers until interaction
-      });
+    const onCanPlay = () => attemptPlay();
+    const onError = () => {
+      if (src !== proxyVideo) {
+        setSrc(proxyVideo);
+        setStatus("loading");
+        return;
+      }
+      setStatus("failed");
     };
 
-    video.addEventListener("loadeddata", () => setVideoReady(true));
-    video.addEventListener("canplay", tryPlay);
-    tryPlay();
+    video.addEventListener("canplay", onCanPlay);
+    video.addEventListener("error", onError);
+    video.load();
+    attemptPlay();
 
     return () => {
-      video.removeEventListener("canplay", tryPlay);
+      video.removeEventListener("canplay", onCanPlay);
+      video.removeEventListener("error", onError);
     };
-  }, [videoSrc]);
+  }, [src, proxyVideo, attemptPlay]);
+
+  useEffect(() => {
+    if (unlocked) attemptPlay();
+  }, [unlocked, attemptPlay]);
+
+  const showMotion = status === "playing";
+  const animatePoster = status === "failed" || status === "loading";
 
   return (
-    <div className="absolute inset-0">
-      {/* Poster always visible so hero never looks blank */}
+    <div className="absolute inset-0 overflow-hidden">
       <img
         src={posterSrc}
         alt=""
         aria-hidden="true"
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-          videoReady ? "opacity-30" : "opacity-50"
-        }`}
+        className={`absolute inset-0 h-full w-full object-cover ${
+          animatePoster ? "hero-ken-burns" : "opacity-40"
+        } ${showMotion ? "opacity-0" : "opacity-55"}`}
       />
       <video
         ref={videoRef}
-        key={videoSrc}
+        src={src}
         autoPlay
         muted
-        loop
         playsInline
+        loop
         preload="auto"
         poster={posterSrc}
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-          videoReady ? "opacity-50" : "opacity-0"
+        disablePictureInPicture
+        className={`absolute inset-0 h-full w-full object-cover ${
+          showMotion ? "opacity-55" : "opacity-0"
         }`}
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/30 via-[#0a0a0b]/60 to-[#0a0a0b]" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0b]/80 via-transparent to-transparent" />
     </div>

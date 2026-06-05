@@ -1,6 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { registerVideo } from "@/components/MediaUnlock";
+import { resolveVideoSrc } from "@/lib/resolve-video";
+import { useEffect, useRef, useState } from "react";
 import { Play, Eye } from "lucide-react";
 
 export type PortfolioItem = {
@@ -9,6 +11,7 @@ export type PortfolioItem = {
   category: string;
   thumbnail: string;
   video: string;
+  proxyVideo: string;
   views: number;
 };
 
@@ -21,13 +24,45 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
   const [playing, setPlaying] = useState(false);
   const [thumbError, setThumbError] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const [videoSrc, setVideoSrc] = useState(item.video);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const startPlay = () => {
-    setPlaying(true);
-    requestAnimationFrame(() => {
-      videoRef.current?.play().catch(() => {});
+  useEffect(() => {
+    let cancelled = false;
+    resolveVideoSrc(item.video, item.proxyVideo).then((src) => {
+      if (!cancelled) setVideoSrc(src);
     });
+    return () => {
+      cancelled = true;
+    };
+  }, [item.video, item.proxyVideo]);
+
+  useEffect(() => {
+    if (!playing || videoError) return;
+    const video = videoRef.current;
+    if (!video) return;
+
+    registerVideo(video);
+    video.muted = true;
+    video.load();
+
+    const play = () => {
+      video.play().catch(() => setVideoError(true));
+    };
+
+    if (video.readyState >= 2) play();
+    else video.addEventListener("canplay", play, { once: true });
+
+    return () => video.removeEventListener("canplay", play);
+  }, [playing, videoError, videoSrc]);
+
+  const retryWithProxy = () => {
+    if (videoSrc !== item.proxyVideo) {
+      setVideoSrc(item.proxyVideo);
+      setVideoError(false);
+      return;
+    }
+    setVideoError(true);
   };
 
   return (
@@ -35,14 +70,14 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
       {playing && !videoError ? (
         <video
           ref={videoRef}
-          src={item.video}
+          src={videoSrc}
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          onError={() => setVideoError(true)}
-          className="h-full w-full object-cover"
+          onError={retryWithProxy}
+          className="absolute inset-0 h-full w-full object-cover"
         />
       ) : (
         <>
@@ -59,8 +94,8 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
           )}
           <button
             type="button"
-            onClick={startPlay}
-            className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35"
+            onClick={() => setPlaying(true)}
+            className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35"
             aria-label={`Play ${item.title}`}
           >
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#e8c547] text-[#0a0a0b] shadow-lg transition-transform group-hover:scale-110">
@@ -70,21 +105,21 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
         </>
       )}
 
-      {videoError && (
-        <div className="absolute inset-0 flex items-center justify-center p-4 text-center text-xs text-[#9a9590]">
-          Video loading.{" "}
+      {playing && videoError && (
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-2 p-4 text-center">
+          <p className="text-xs text-[#9a9590]">Could not load this reel.</p>
           <a
             href={`https://www.instagram.com/p/${item.id}/`}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-1 text-[#e8c547] underline"
+            className="rounded-full bg-[#e8c547] px-4 py-2 text-xs font-semibold text-[#0a0a0b]"
           >
             Watch on Instagram
           </a>
         </div>
       )}
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12">
         <span className="mb-1 inline-block rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-[#e8c547] backdrop-blur-sm">
           {item.category}
         </span>

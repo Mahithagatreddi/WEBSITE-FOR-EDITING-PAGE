@@ -1,3 +1,4 @@
+import { MediaUnlockProvider } from "@/components/MediaUnlock";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -11,6 +12,7 @@ import { FloatingCTA } from "@/components/FloatingCTA";
 
 export default function Home() {
   return (
+    <MediaUnlockProvider>
     <SmoothScroll>
       <Header />
       <main>
@@ -24,5 +26,6 @@ export default function Home() {
       <Footer />
       <FloatingCTA />
     </SmoothScroll>
+    </MediaUnlockProvider>
   );
 }

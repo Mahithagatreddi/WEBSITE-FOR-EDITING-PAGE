@@ -7,14 +7,16 @@ import { HeroBackground } from "@/components/HeroBackground";
 import { getWhatsAppUrl, siteConfig } from "@/config/site";
 import content from "@/data/content.json";
 
-// Smaller reel for faster hero load on mobile networks
-const heroVideo = "/videos/DY_GmSLAgQ5.mp4";
-const heroPoster = "/photos/DY_GmSLAgQ5.jpg";
+const hero = content.hero;
 
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] overflow-hidden">
-      <HeroBackground videoSrc={heroVideo} posterSrc={heroPoster} />
+      <HeroBackground
+        localVideo={hero.video}
+        proxyVideo={hero.proxyVideo}
+        posterSrc={hero.poster}
+      />
 
       <div className="relative mx-auto flex min-h-[100dvh] max-w-6xl flex-col justify-end px-5 pb-24 pt-32 md:justify-center md:pb-20">
         <motion.div

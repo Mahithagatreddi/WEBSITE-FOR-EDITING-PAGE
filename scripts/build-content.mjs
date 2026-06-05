@@ -36,6 +36,8 @@ const portfolio = posts
       category: categorize(p.caption),
       thumbnail: `/photos/${id}.jpg`,
       video: `/videos/${id}.mp4`,
+      proxyVideo: `/api/reel/${id}`,
+      remoteVideo: p.videoUrl || null,
       views,
       likes,
       location: p.locationName || null,
@@ -50,6 +52,10 @@ const content = {
     tagline: "Reels that feel like cinema. Shot on iPhone. Edited with intent.",
     subline:
       "Weddings, birthdays, brand deliveries, and festival films across Visakhapatnam. 24 hour turnaround available.",
+    videoId: "DY_GmSLAgQ5",
+    video: "/videos/DY_GmSLAgQ5.mp4",
+    poster: "/photos/DY_GmSLAgQ5.jpg",
+    proxyVideo: "/api/reel/DY_GmSLAgQ5",
   },
   stats: [
     { label: "Followers", value: `${profile.followersCount.toLocaleString()}+` },
