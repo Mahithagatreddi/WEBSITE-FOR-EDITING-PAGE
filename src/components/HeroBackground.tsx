@@ -1,7 +1,7 @@
 "use client";
 
 import { registerVideo, useMediaUnlocked } from "@/components/MediaUnlock";
-import { resolveVideoSrc } from "@/lib/resolve-video";
+import { preferProxyVideo, resolveVideoSrc } from "@/lib/resolve-video";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
@@ -11,7 +11,9 @@ type Props = {
 };
 
 export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
-  const [src, setSrc] = useState(localVideo);
+  const [src, setSrc] = useState(
+    preferProxyVideo() ? proxyVideo : localVideo
+  );
   const videoRef = useRef<HTMLVideoElement>(null);
   const unlocked = useMediaUnlocked();
   const [status, setStatus] = useState<"loading" | "playing" | "failed">("loading");
@@ -68,7 +70,6 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
   }, [unlocked, attemptPlay]);
 
   const showMotion = status === "playing";
-  const animatePoster = status === "failed" || status === "loading";
 
   return (
     <div className="absolute inset-0 overflow-hidden">
@@ -76,9 +77,9 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
         src={posterSrc}
         alt=""
         aria-hidden="true"
-        className={`absolute inset-0 h-full w-full object-cover ${
-          animatePoster ? "hero-ken-burns" : "opacity-40"
-        } ${showMotion ? "opacity-0" : "opacity-55"}`}
+        className={`absolute inset-0 h-full w-full object-cover hero-ken-burns ${
+          showMotion ? "opacity-35" : "opacity-55"
+        }`}
       />
       <video
         ref={videoRef}
@@ -90,7 +91,7 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
         preload="auto"
         poster={posterSrc}
         disablePictureInPicture
-        className={`absolute inset-0 h-full w-full object-cover ${
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
           showMotion ? "opacity-55" : "opacity-0"
         }`}
       />
