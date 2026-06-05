@@ -1,0 +1,403 @@
+{
+  "hero": {
+    "tagline": "Reels that feel like cinema. Shot on iPhone. Edited with intent.",
+    "subline": "Weddings, birthdays, brand deliveries, and festival films across Visakhapatnam. 24 hour turnaround available."
+  },
+  "stats": [
+    {
+      "label": "Followers",
+      "value": "2,199+"
+    },
+    {
+      "label": "Projects",
+      "value": "43+"
+    },
+    {
+      "label": "Turnaround",
+      "value": "24 hrs"
+    },
+    {
+      "label": "Based in",
+      "value": "Vizag"
+    }
+  ],
+  "services": [
+    {
+      "name": "Wedding Reels",
+      "description": "Sangeet, haldi, reception, and pre-wedding films cut for emotion and shareability.",
+      "fromPrice": "₹4,999",
+      "guessed": true
+    },
+    {
+      "name": "Birthday & Celebration",
+      "description": "Beach birthdays, surprise parties, and milestone edits your guests will replay.",
+      "fromPrice": "₹2,499",
+      "guessed": true
+    },
+    {
+      "name": "Brand & Delivery Shoots",
+      "description": "Car and bike delivery reels, showroom launches, and product moments that pop on feed.",
+      "fromPrice": "₹3,499",
+      "guessed": true
+    },
+    {
+      "name": "Events & Festivals",
+      "description": "Village festivals, corporate events, and cultural moments captured and cut fast.",
+      "fromPrice": "₹3,999",
+      "guessed": true
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Book your slot",
+      "text": "Message on WhatsApp with your date, event type, and reference reel."
+    },
+    {
+      "step": "02",
+      "title": "We shoot or you send footage",
+      "text": "On-site iPhone capture in Vizag, or send your clips from anywhere."
+    },
+    {
+      "step": "03",
+      "title": "Edit and review",
+      "text": "Cinematic cuts, color, music sync, and transitions tuned to your vibe."
+    },
+    {
+      "step": "04",
+      "title": "Delivery",
+      "text": "Final reel ready for Instagram. Rush 24 hour option when you need it fast."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Client was very happy with the best output. We caught every memorable moment.",
+      "source": "From Instagram captions"
+    },
+    {
+      "quote": "Proof you do not need a massive rig. Just a great song and an iPhone in hand.",
+      "source": "Wedding reception reel"
+    },
+    {
+      "quote": "Book the slot now. Memorial moments this couple will keep forever.",
+      "source": "Haldi ceremony reel"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do you only work in Vizag?",
+      "a": "I am based in Visakhapatnam and shoot locally. You can also send footage from anywhere in India for editing."
+    },
+    {
+      "q": "How fast can I get my reel?",
+      "a": "Standard delivery is 2 to 3 days. Rush 24 hour turnaround is available when slots are open."
+    },
+    {
+      "q": "What should I send when I enquire?",
+      "a": "Your event date, the type of reel you want, and one reference video from my portfolio or elsewhere."
+    },
+    {
+      "q": "Do you shoot and edit, or edit only?",
+      "a": "Both. I shoot on iPhone for local events and edit everything in-house for a consistent cinematic look."
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "DWyNcXiAKEl",
+      "title": "Night drive BMW !! Shoot.",
+      "category": "Brand & Delivery",
+      "thumbnail": "/photos/DWyNcXiAKEl.jpg",
+      "video": "/videos/DWyNcXiAKEl.mp4",
+      "views": 66382,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DXgBIe4j-HW",
+      "title": "Blessed",
+      "category": "Weddings",
+      "thumbnail": "/photos/DXgBIe4j-HW.jpg",
+      "video": "/videos/DXgBIe4j-HW.mp4",
+      "views": 18571,
+      "likes": 819,
+      "location": "Vizag - The City Of Destiny"
+    },
+    {
+      "id": "DXW4r9rE2B7",
+      "title": "Babeee\"s",
+      "category": "Reels",
+      "thumbnail": "/photos/DXW4r9rE2B7.jpg",
+      "video": "/videos/DXW4r9rE2B7.mp4",
+      "views": 10158,
+      "likes": null,
+      "location": "Vizag - The City Of Destiny"
+    },
+    {
+      "id": "DX0f3JmSjPb",
+      "title": "POV You didnt expect this",
+      "category": "Weddings",
+      "thumbnail": "/photos/DX0f3JmSjPb.jpg",
+      "video": "/videos/DX0f3JmSjPb.mp4",
+      "views": 9240,
+      "likes": null,
+      "location": "India"
+    },
+    {
+      "id": "DWsVChlAQoE",
+      "title": "Mandhara State of Mind",
+      "category": "Reels",
+      "thumbnail": "/photos/DWsVChlAQoE.jpg",
+      "video": "/videos/DWsVChlAQoE.mp4",
+      "views": 7716,
+      "likes": null,
+      "location": null
+    },
+    {
+      "id": "DYHWDqmxZ_F",
+      "title": "Our parents gave us the life they once dreamed of today, we",
+      "category": "Reels",
+      "thumbnail": "/photos/DYHWDqmxZ_F.jpg",
+      "video": "/videos/DYHWDqmxZ_F.mp4",
+      "views": 6867,
+      "likes": 302,
+      "location": "Aganampudi"
+    },
+    {
+      "id": "DW-QEZigJj0",
+      "title": "Classic 350 delivery shoot .",
+      "category": "Brand & Delivery",
+      "thumbnail": "/photos/DW-QEZigJj0.jpg",
+      "video": "/videos/DW-QEZigJj0.mp4",
+      "views": 5643,
+      "likes": null,
+      "location": "Vizag"
+    },
+    {
+      "id": "DYqkpkoAz-B",
+      "title": "Beach birthday celebrations its was great moments we catchup",
+      "category": "Birthdays",
+      "thumbnail": "/photos/DYqkpkoAz-B.jpg",
+      "video": "/videos/DYqkpkoAz-B.mp4",
+      "views": 4526,
+      "likes": null,
+      "location": "RK Beach"
+    },
+    {
+      "id": "DX6fb-kAbbS",
+      "title": "Capturing the vibrant moments of your special day!",
+      "category": "Weddings",
+      "thumbnail": "/photos/DX6fb-kAbbS.jpg",
+      "video": "/videos/DX6fb-kAbbS.mp4",
+      "views": 4439,
+      "likes": null,
+      "location": "India"
+    },
+    {
+      "id": "DYRusJIMnGW",
+      "title": "Proof that you dont need a massive rig to capture magic. Jus",
+      "category": "Weddings",
+      "thumbnail": "/photos/DYRusJIMnGW.jpg",
+      "video": "/videos/DYRusJIMnGW.mp4",
+      "views": 4172,
+      "likes": null,
+      "location": "India"
+    },
+    {
+      "id": "DY8hnIPgHIB",
+      "title": "Bound by tradition, united by love.  Heres to a lifetime of",
+      "category": "Weddings",
+      "thumbnail": "/photos/DY8hnIPgHIB.jpg",
+      "video": "/videos/DY8hnIPgHIB.mp4",
+      "views": 3965,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DXbu1CIAKqD",
+      "title": "Pre-wedding reel shoot",
+      "category": "Weddings",
+      "thumbnail": "/photos/DXbu1CIAKqD.jpg",
+      "video": "/videos/DXbu1CIAKqD.mp4",
+      "views": 3867,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DX82BxcAsPE",
+      "title": "Beach reel shoot !! .. Quality output in under budget",
+      "category": "Reels",
+      "thumbnail": "/photos/DX82BxcAsPE.jpg",
+      "video": "/videos/DX82BxcAsPE.mp4",
+      "views": 3746,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DYi15ozgIaj",
+      "title": "Godum Raya  Where traditions turn into memories! We Catch up",
+      "category": "Weddings",
+      "thumbnail": "/photos/DYi15ozgIaj.jpg",
+      "video": "/videos/DYi15ozgIaj.mp4",
+      "views": 3737,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DW3aiVByp_u",
+      "title": "Best birthday ever! Surprising birthday on beach",
+      "category": "Birthdays",
+      "thumbnail": "/photos/DW3aiVByp_u.jpg",
+      "video": "/videos/DW3aiVByp_u.mp4",
+      "views": 3589,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DWfYfThgCv1",
+      "title": "Evening drive with my family Panorama Hills road did not dis",
+      "category": "Reels",
+      "thumbnail": "/photos/DWfYfThgCv1.jpg",
+      "video": "/videos/DWfYfThgCv1.mp4",
+      "views": 3516,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DXA1YZlAMTc",
+      "title": "Kalyanam.",
+      "category": "Weddings",
+      "thumbnail": "/photos/DXA1YZlAMTc.jpg",
+      "video": "/videos/DXA1YZlAMTc.mp4",
+      "views": 3227,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DXvOAfzAl1B",
+      "title": "Dm for slot book rjeditzzz_ ..",
+      "category": "Brand & Delivery",
+      "thumbnail": "/photos/DXvOAfzAl1B.jpg",
+      "video": "/videos/DXvOAfzAl1B.mp4",
+      "views": 2950,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DW6gjUXgIa7",
+      "title": "First engagement event in our Rjeditzzz!!",
+      "category": "Weddings",
+      "thumbnail": "/photos/DW6gjUXgIa7.jpg",
+      "video": "/videos/DW6gjUXgIa7.mp4",
+      "views": 2607,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DY_GmSLAgQ5",
+      "title": "Beach birthday vibes",
+      "category": "Birthdays",
+      "thumbnail": "/photos/DY_GmSLAgQ5.jpg",
+      "video": "/videos/DY_GmSLAgQ5.mp4",
+      "views": 2512,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DYgaJtygQyt",
+      "title": "Pooja done, now the adventures begin .",
+      "category": "Brand & Delivery",
+      "thumbnail": "/photos/DYgaJtygQyt.jpg",
+      "video": "/videos/DYgaJtygQyt.mp4",
+      "views": 2318,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DXIiaR2gJGz",
+      "title": "New creta delivery.",
+      "category": "Brand & Delivery",
+      "thumbnail": "/photos/DXIiaR2gJGz.jpg",
+      "video": "/videos/DXIiaR2gJGz.mp4",
+      "views": 2177,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DYUTyc4A_6m",
+      "title": "We catch up every moment in Haldi Holi event, it was last of",
+      "category": "Weddings",
+      "thumbnail": "/photos/DYUTyc4A_6m.jpg",
+      "video": "/videos/DYUTyc4A_6m.mp4",
+      "views": 1608,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DYlUvnUAXYU",
+      "title": "Cheers to 25 years of blessings, growth  good vibes  We catc",
+      "category": "Birthdays",
+      "thumbnail": "/photos/DYlUvnUAXYU.jpg",
+      "video": "/videos/DYlUvnUAXYU.mp4",
+      "views": 1579,
+      "likes": null,
+      "location": "Visakhapatnam City of Destiny"
+    },
+    {
+      "id": "DXMJWweAPoa",
+      "title": "Andam  Acharam",
+      "category": "Reels",
+      "thumbnail": "/photos/DXMJWweAPoa.jpg",
+      "video": "/videos/DXMJWweAPoa.mp4",
+      "views": 1430,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DYe4Cl6S5nQ",
+      "title": "Raw iPhone clip vs Final edit",
+      "category": "Weddings",
+      "thumbnail": "/photos/DYe4Cl6S5nQ.jpg",
+      "video": "/videos/DYe4Cl6S5nQ.mp4",
+      "views": 1389,
+      "likes": null,
+      "location": "Visakhapatnam"
+    },
+    {
+      "id": "DYV8WcDg-Em",
+      "title": "We shooted interior work in house. You are great experience.",
+      "category": "Reels",
+      "thumbnail": "/photos/DYV8WcDg-Em.jpg",
+      "video": "/videos/DYV8WcDg-Em.mp4",
+      "views": 1301,
+      "likes": null,
+      "location": "India"
+    },
+    {
+      "id": "DZG7xkugRNx",
+      "title": "Royal Enfield. Delivery. Shoot !!",
+      "category": "Brand & Delivery",
+      "thumbnail": "/photos/DZG7xkugRNx.jpg",
+      "video": "/videos/DZG7xkugRNx.mp4",
+      "views": 1030,
+      "likes": null,
+      "location": "India"
+    },
+    {
+      "id": "DZKN2XrAxkU",
+      "title": "The village Revallapalem finally celebrated this beautiful f",
+      "category": "Events",
+      "thumbnail": "/photos/DZKN2XrAxkU.jpg",
+      "video": "/videos/DZKN2XrAxkU.mp4",
+      "views": 843,
+      "likes": null,
+      "location": "India"
+    }
+  ],
+  "categories": [
+    "Brand & Delivery",
+    "Weddings",
+    "Reels",
+    "Birthdays",
+    "Events"
+  ]
+}
