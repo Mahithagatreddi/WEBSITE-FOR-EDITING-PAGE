@@ -1,7 +1,7 @@
 "use client";
 
 import { registerVideo, useMediaUnlocked } from "@/components/MediaUnlock";
-import { preferProxyVideo, resolveVideoSrc } from "@/lib/resolve-video";
+import { resolveVideoSrc } from "@/lib/resolve-video";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
@@ -11,12 +11,10 @@ type Props = {
 };
 
 export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
-  const [src, setSrc] = useState(
-    preferProxyVideo() ? proxyVideo : localVideo
-  );
+  const [src, setSrc] = useState(localVideo);
   const videoRef = useRef<HTMLVideoElement>(null);
   const unlocked = useMediaUnlocked();
-  const [status, setStatus] = useState<"loading" | "playing" | "failed">("loading");
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -33,10 +31,11 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
     if (!video) return;
     video.muted = true;
     video.setAttribute("muted", "");
-    video
-      .play()
-      .then(() => setStatus("playing"))
-      .catch(() => setStatus("failed"));
+    video.playsInline = true;
+    const p = video.play();
+    if (p) {
+      p.then(() => setVideoPlaying(true)).catch(() => setVideoPlaying(false));
+    }
   }, []);
 
   useEffect(() => {
@@ -44,23 +43,25 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
     if (!video) return;
     registerVideo(video);
 
-    const onCanPlay = () => attemptPlay();
+    const onPlaying = () => setVideoPlaying(true);
     const onError = () => {
       if (src !== proxyVideo) {
         setSrc(proxyVideo);
-        setStatus("loading");
+        setVideoPlaying(false);
         return;
       }
-      setStatus("failed");
+      setVideoPlaying(false);
     };
 
-    video.addEventListener("canplay", onCanPlay);
+    video.addEventListener("playing", onPlaying);
+    video.addEventListener("canplay", attemptPlay);
     video.addEventListener("error", onError);
     video.load();
     attemptPlay();
 
     return () => {
-      video.removeEventListener("canplay", onCanPlay);
+      video.removeEventListener("playing", onPlaying);
+      video.removeEventListener("canplay", attemptPlay);
       video.removeEventListener("error", onError);
     };
   }, [src, proxyVideo, attemptPlay]);
@@ -69,8 +70,6 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
     if (unlocked) attemptPlay();
   }, [unlocked, attemptPlay]);
 
-  const showMotion = status === "playing";
-
   return (
     <div className="absolute inset-0 overflow-hidden">
       <img
@@ -78,7 +77,7 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
         alt=""
         aria-hidden="true"
         className={`absolute inset-0 h-full w-full object-cover hero-ken-burns ${
-          showMotion ? "opacity-35" : "opacity-55"
+          videoPlaying ? "opacity-30" : "opacity-50"
         }`}
       />
       <video
@@ -91,8 +90,8 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
         preload="auto"
         poster={posterSrc}
         disablePictureInPicture
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-          showMotion ? "opacity-55" : "opacity-0"
+        className={`absolute inset-0 h-full w-full object-cover ${
+          videoPlaying ? "opacity-55" : "opacity-0"
         }`}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/30 via-[#0a0a0b]/60 to-[#0a0a0b]" />

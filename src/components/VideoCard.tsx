@@ -1,7 +1,7 @@
 "use client";
 
 import { registerVideo } from "@/components/MediaUnlock";
-import { preferProxyVideo, resolveVideoSrc } from "@/lib/resolve-video";
+import { resolveVideoSrc } from "@/lib/resolve-video";
 import { useEffect, useRef, useState } from "react";
 import { Play, Eye, ExternalLink } from "lucide-react";
 
@@ -21,14 +21,11 @@ function formatViews(n: number) {
 }
 
 export function VideoCard({ item }: { item: PortfolioItem }) {
-  const [mode, setMode] = useState<"thumb" | "native" | "embed">("thumb");
+  const [playing, setPlaying] = useState(false);
   const [thumbError, setThumbError] = useState(false);
-  const [nativeFailed, setNativeFailed] = useState(false);
-  const [videoSrc, setVideoSrc] = useState(
-    preferProxyVideo() ? item.proxyVideo : item.video
-  );
+  const [videoError, setVideoError] = useState(false);
+  const [videoSrc, setVideoSrc] = useState(item.video);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const embedUrl = `https://www.instagram.com/p/${item.id}/embed`;
 
   useEffect(() => {
     let cancelled = false;
@@ -41,55 +38,38 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
   }, [item.video, item.proxyVideo]);
 
   useEffect(() => {
-    if (mode !== "native" || nativeFailed) return;
+    if (!playing || videoError) return;
     const video = videoRef.current;
     if (!video) return;
 
     registerVideo(video);
     video.muted = true;
+    video.setAttribute("muted", "");
+    video.playsInline = true;
     video.load();
 
     const play = () => {
-      video.play().catch(() => setNativeFailed(true));
+      video.play().catch(() => setVideoError(true));
     };
 
     if (video.readyState >= 2) play();
     else video.addEventListener("canplay", play, { once: true });
 
     return () => video.removeEventListener("canplay", play);
-  }, [mode, nativeFailed, videoSrc]);
+  }, [playing, videoError, videoSrc]);
 
-  const startPlay = () => {
-    if (preferProxyVideo()) {
-      setMode("embed");
-      return;
-    }
-    setMode("native");
-  };
-
-  const onNativeError = () => {
+  const onVideoError = () => {
     if (videoSrc !== item.proxyVideo) {
       setVideoSrc(item.proxyVideo);
-      setNativeFailed(false);
+      setVideoError(false);
       return;
     }
-    setNativeFailed(true);
-    setMode("embed");
+    setVideoError(true);
   };
 
   return (
     <article className="video-card group relative aspect-[9/16] overflow-hidden rounded-2xl bg-[#141416]">
-      {mode === "embed" && (
-        <iframe
-          src={embedUrl}
-          title={item.title}
-          className="absolute inset-0 h-full w-full border-0 bg-black"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-          allowFullScreen
-        />
-      )}
-
-      {mode === "native" && !nativeFailed && (
+      {playing && !videoError ? (
         <video
           ref={videoRef}
           src={videoSrc}
@@ -98,12 +78,10 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
           loop
           playsInline
           preload="auto"
-          onError={onNativeError}
+          onError={onVideoError}
           className="absolute inset-0 h-full w-full object-cover"
         />
-      )}
-
-      {mode === "thumb" && (
+      ) : (
         <>
           {!thumbError ? (
             <img
@@ -118,7 +96,7 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
           )}
           <button
             type="button"
-            onClick={startPlay}
+            onClick={() => setPlaying(true)}
             className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35"
             aria-label={`Play ${item.title}`}
           >
@@ -129,7 +107,7 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
         </>
       )}
 
-      {mode === "native" && nativeFailed && (
+      {playing && videoError && (
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 p-4">
           <a
             href={`https://www.instagram.com/p/${item.id}/`}
@@ -138,7 +116,7 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
             className="flex items-center gap-2 rounded-full bg-[#e8c547] px-4 py-2 text-xs font-semibold text-[#0a0a0b]"
           >
             <ExternalLink className="h-3.5 w-3.5" />
-            Open on Instagram
+            Watch on Instagram
           </a>
         </div>
       )}
