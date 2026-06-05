@@ -14,15 +14,16 @@ export function useMediaUnlocked() {
   return useContext(MediaUnlockContext);
 }
 
-export function registerVideo(el: HTMLVideoElement | null) {
+/** Hero autoplay only. Portfolio reels manage their own sound on tap. */
+const autoplayVideos = new Set<HTMLVideoElement>();
+
+export function registerAutoplayVideo(el: HTMLVideoElement | null) {
   if (!el) return;
-  pendingVideos.add(el);
+  autoplayVideos.add(el);
 }
 
-const pendingVideos = new Set<HTMLVideoElement>();
-
-function playAllPending() {
-  pendingVideos.forEach((video) => {
+function playAutoplayMuted() {
+  autoplayVideos.forEach((video) => {
     video.muted = true;
     video.play().catch(() => {});
   });
@@ -34,7 +35,7 @@ export function MediaUnlockProvider({ children }: { children: React.ReactNode })
   const unlock = useCallback(() => {
     if (unlocked) return;
     setUnlocked(true);
-    playAllPending();
+    playAutoplayMuted();
   }, [unlocked]);
 
   useEffect(() => {
@@ -50,7 +51,7 @@ export function MediaUnlockProvider({ children }: { children: React.ReactNode })
   }, [unlock]);
 
   useEffect(() => {
-    if (unlocked) playAllPending();
+    if (unlocked) playAutoplayMuted();
   }, [unlocked]);
 
   return (

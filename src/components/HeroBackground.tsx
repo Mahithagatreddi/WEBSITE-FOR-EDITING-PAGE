@@ -1,6 +1,6 @@
 "use client";
 
-import { registerVideo, useMediaUnlocked } from "@/components/MediaUnlock";
+import { registerAutoplayVideo, useMediaUnlocked } from "@/components/MediaUnlock";
 import { resolveVideoSrc } from "@/lib/resolve-video";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -41,7 +41,7 @@ export function HeroBackground({ localVideo, proxyVideo, posterSrc }: Props) {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    registerVideo(video);
+    registerAutoplayVideo(video);
 
     const onPlaying = () => setVideoPlaying(true);
     const onError = () => {

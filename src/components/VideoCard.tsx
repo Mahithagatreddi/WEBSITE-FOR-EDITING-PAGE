@@ -1,9 +1,9 @@
 "use client";
 
-import { registerVideo } from "@/components/MediaUnlock";
+import { pauseOtherReels } from "@/lib/reel-audio";
 import { resolveVideoSrc } from "@/lib/resolve-video";
 import { useEffect, useRef, useState } from "react";
-import { Play, Eye, ExternalLink } from "lucide-react";
+import { Play, Eye, ExternalLink, Volume2, VolumeX } from "lucide-react";
 
 export type PortfolioItem = {
   id: string;
@@ -22,6 +22,7 @@ function formatViews(n: number) {
 
 export function VideoCard({ item }: { item: PortfolioItem }) {
   const [playing, setPlaying] = useState(false);
+  const [muted, setMuted] = useState(false);
   const [thumbError, setThumbError] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [videoSrc, setVideoSrc] = useState(item.video);
@@ -37,26 +38,37 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
     };
   }, [item.video, item.proxyVideo]);
 
-  useEffect(() => {
-    if (!playing || videoError) return;
+  const playWithSound = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    registerVideo(video);
-    video.muted = true;
-    video.setAttribute("muted", "");
-    video.playsInline = true;
-    video.load();
+    pauseOtherReels(video);
+    video.muted = false;
+    video.volume = 1;
+    setMuted(false);
 
-    const play = () => {
-      video.play().catch(() => setVideoError(true));
-    };
+    video
+      .play()
+      .then(() => setPlaying(true))
+      .catch(() => {
+        video.muted = true;
+        setMuted(true);
+        video.play().then(() => setPlaying(true)).catch(() => setVideoError(true));
+      });
+  };
 
-    if (video.readyState >= 2) play();
-    else video.addEventListener("canplay", play, { once: true });
-
-    return () => video.removeEventListener("canplay", play);
-  }, [playing, videoError, videoSrc]);
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const video = videoRef.current;
+    if (!video) return;
+    const next = !video.muted;
+    video.muted = next;
+    setMuted(next);
+    if (!next) {
+      video.volume = 1;
+      video.play().catch(() => {});
+    }
+  };
 
   const onVideoError = () => {
     if (videoSrc !== item.proxyVideo) {
@@ -65,23 +77,25 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
       return;
     }
     setVideoError(true);
+    setPlaying(false);
   };
 
   return (
     <article className="video-card group relative aspect-[9/16] overflow-hidden rounded-2xl bg-[#141416]">
-      {playing && !videoError ? (
-        <video
-          ref={videoRef}
-          src={videoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          onError={onVideoError}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-      ) : (
+      <video
+        ref={videoRef}
+        data-portfolio-reel
+        src={videoSrc}
+        loop
+        playsInline
+        preload="metadata"
+        onError={onVideoError}
+        className={`absolute inset-0 h-full w-full object-cover ${
+          playing && !videoError ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
+      {!playing && !videoError && (
         <>
           {!thumbError ? (
             <img
@@ -96,9 +110,9 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
           )}
           <button
             type="button"
-            onClick={() => setPlaying(true)}
+            onClick={playWithSound}
             className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35"
-            aria-label={`Play ${item.title}`}
+            aria-label={`Play ${item.title} with sound`}
           >
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#e8c547] text-[#0a0a0b] shadow-lg transition-transform group-hover:scale-110">
               <Play className="ml-0.5 h-5 w-5 fill-current" />
@@ -107,7 +121,18 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
         </>
       )}
 
-      {playing && videoError && (
+      {playing && !videoError && (
+        <button
+          type="button"
+          onClick={toggleMute}
+          className="absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+          aria-label={muted ? "Unmute reel" : "Mute reel"}
+        >
+          {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+        </button>
+      )}
+
+      {videoError && (
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 p-4">
           <a
             href={`https://www.instagram.com/p/${item.id}/`}
