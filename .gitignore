@@ -30,7 +30,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-# Large videos: streamed via /api/reel on Vercel
+# Large videos: streamed via /api/reel on Vercel (not stored in GitHub)
 public/videos/
 public/videos-web/
 
