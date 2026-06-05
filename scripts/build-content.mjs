@@ -46,16 +46,17 @@ const portfolio = posts
   .sort((a, b) => b.views - a.views);
 
 const categories = [...new Set(portfolio.map((p) => p.category))];
+const heroReel = portfolio[0];
 
 const content = {
   hero: {
     tagline: "Reels that feel like cinema. Shot on iPhone. Edited with intent.",
     subline:
       "Weddings, birthdays, brand deliveries, and festival films across Visakhapatnam. 24 hour turnaround available.",
-    videoId: "DY_GmSLAgQ5",
-    video: "/videos/DY_GmSLAgQ5.mp4",
-    poster: "/photos/DY_GmSLAgQ5.jpg",
-    proxyVideo: "/api/reel/DY_GmSLAgQ5",
+    videoId: heroReel.id,
+    video: heroReel.video,
+    poster: heroReel.thumbnail,
+    proxyVideo: heroReel.proxyVideo,
   },
   stats: [
     { label: "Followers", value: `${profile.followersCount.toLocaleString()}+` },
