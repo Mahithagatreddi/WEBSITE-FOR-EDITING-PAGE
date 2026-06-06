@@ -127,7 +127,7 @@ ${initialMsg}`;
                   type="submit"
                   className="rounded-lg bg-[#e8c547] px-5 py-2 text-sm font-semibold text-black transition hover:bg-[#d6b53e]"
                 >
-                  Continue to WhatsApp
+                  Submit & Continue to WhatsApp
                 </button>
               </div>
             </form>
