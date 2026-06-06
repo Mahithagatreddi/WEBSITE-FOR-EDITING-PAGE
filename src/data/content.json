@@ -1,7 +1,7 @@
 {
   "hero": {
     "tagline": "Reels that feel like cinema. Shot on iPhone. Edited with intent.",
-    "subline": "Weddings, birthdays, brand deliveries, and festival films across Visakhapatnam. 24 hour turnaround available.",
+    "subline": "Weddings, birthdays, brand deliveries, and festival films across South part of India.",
     "videoId": "DWyNcXiAKEl",
     "video": "/videos/DWyNcXiAKEl.mp4",
     "poster": "/photos/DWyNcXiAKEl.jpg",
@@ -14,40 +14,36 @@
     },
     {
       "label": "Projects",
-      "value": "43+"
-    },
-    {
-      "label": "Turnaround",
-      "value": "24 hrs"
+      "value": "60+"
     },
     {
       "label": "Based in",
-      "value": "Vizag"
+      "value": "South part of India"
     }
   ],
   "services": [
     {
       "name": "Wedding Reels",
       "description": "Sangeet, haldi, reception, and pre-wedding films cut for emotion and shareability.",
-      "fromPrice": "₹4,999",
+      "fromPrice": "\u20b94,999",
       "guessed": true
     },
     {
       "name": "Birthday & Celebration",
       "description": "Beach birthdays, surprise parties, and milestone edits your guests will replay.",
-      "fromPrice": "₹2,499",
+      "fromPrice": "\u20b92,499",
       "guessed": true
     },
     {
       "name": "Brand & Delivery Shoots",
       "description": "Car and bike delivery reels, showroom launches, and product moments that pop on feed.",
-      "fromPrice": "₹3,499",
+      "fromPrice": "\u20b93,499",
       "guessed": true
     },
     {
       "name": "Events & Festivals",
       "description": "Village festivals, corporate events, and cultural moments captured and cut fast.",
-      "fromPrice": "₹3,999",
+      "fromPrice": "\u20b93,999",
       "guessed": true
     }
   ],
@@ -60,7 +56,7 @@
     {
       "step": "02",
       "title": "We shoot or you send footage",
-      "text": "On-site iPhone capture in Vizag, or send your clips from anywhere."
+      "text": "On-site iPhone capture in South part of India, or send your clips from anywhere."
     },
     {
       "step": "03",
@@ -70,7 +66,7 @@
     {
       "step": "04",
       "title": "Delivery",
-      "text": "Final reel ready for Instagram. Rush 24 hour option when you need it fast."
+      "text": "Final reel ready for Instagram."
     }
   ],
   "testimonials": [
@@ -89,12 +85,12 @@
   ],
   "faq": [
     {
-      "q": "Do you only work in Vizag?",
-      "a": "I am based in Visakhapatnam and shoot locally. You can also send footage from anywhere in India for editing."
+      "q": "Do you only work in the South part of India?",
+      "a": "I am based in the South part of India and shoot locally. You can also send footage from anywhere in India for editing."
     },
     {
       "q": "How fast can I get my reel?",
-      "a": "Standard delivery is 2 to 3 days. Rush 24 hour turnaround is available when slots are open."
+      "a": "Standard delivery is 2 to 3 days."
     },
     {
       "q": "What should I send when I enquire?",
@@ -116,7 +112,7 @@
       "remoteVideo": "https://scontent-lax7-1.cdninstagram.com/o1/v/t16/f2/m86/AQM_3n7mSo_lXVDJ_vH4nQyfe2FjywbQxxPN2BZeWcDCUiyszsTWje7nZtaGbgZu8iQUqKkxTb1ZlEIDk67rsi6WLnMkszkCddqfgRY.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=105&vs=1135951708644382_36485773&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xOTQzQkY1NDY4MDZEMTBFQTFENDhFNDg2RDQ1MTQ4Ql92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0UzNDdGREQyMTM1ODc1NjIwMTRCMUZENzU1RDc2OThDX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9uGwocTJm0AVAigCQzMsF0BLt2yLQ5WBGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=d5b1802c7c&ccb=9-4&oh=00_Af8YgoRAIsy5xEsKXO63jrDSVqwc1hiywB2O8bK8xrjp5A&oe=6A246C2C&_nc_sid=10d13b",
       "views": 66382,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DXgBIe4j-HW",
@@ -128,7 +124,7 @@
       "remoteVideo": "https://scontent-mia3-3.cdninstagram.com/o1/v/t16/f2/m86/AQPOPk1U-hrlar6tUnhlH_PaVvYTgmSQlpp3P9SslJm37jrVVzITIAW3kLoIMxNJJa-dzVqEG4Ne9kydDNCwSIkIzPqXzhQjbmlW5kE.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=109&vs=4017932441684756_2300750860&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BQzQ2QTk1QjgzMzc0M0YxQzIyODc3NTA5MkVCOTk5RV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzc3NDA0RjE4QzRDMDZFMENFMUVCQ0MyODA1NzZGQ0E2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm3OLM5ePL5j8VAigCQzMsF0BM%2B6XjU%2FfPGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=025454eadb&ccb=9-4&oh=00_Af8vvTyxtvmzIJi1ABQLbuGH16jlOK1ENBy_7aocEEDrRg&oe=6A247B3E&_nc_sid=10d13b",
       "views": 18571,
       "likes": 819,
-      "location": "Vizag - The City Of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DXW4r9rE2B7",
@@ -140,7 +136,7 @@
       "remoteVideo": "https://scontent-lga3-2.cdninstagram.com/o1/v/t16/f2/m86/AQOdcjXP76bpAwbvxLNcr6h0BRjp92BJsbieRD3IhmwrDKZnmQJ2t_Rx4W_X93MNvlPdb091Q7ZNNFcNtGhoLiFC5Fk7ci34CPAK6ew.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=107&vs=1890724041621138_1951289894&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84MTRDOUQ4MzkyQUMxNkNCOTJENzdGOUQwNDhGRjU5RF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzkyNDUxMTkwQzEyRUFENUNERERBMjRENDNDNEQyNDg5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmlqi33suHzz8VAigCQzMsF0Aud0vGp%2B%2BeGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=2fb74957ef&ccb=9-4&oh=00_Af_RBzxKc5l0SMThrhG4FLPqiRAMXivbenFeiVvwwUdeCA&oe=6A24850C&_nc_sid=10d13b",
       "views": 10158,
       "likes": null,
-      "location": "Vizag - The City Of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DX0f3JmSjPb",
@@ -188,7 +184,7 @@
       "remoteVideo": "https://scontent-lga3-2.cdninstagram.com/o1/v/t16/f2/m86/AQPz1E3-f4LyYFfKO5m9v5Szyojw2bHmmY2tbij5KO8kSfLk4XSPyd8JEd_25Cxg7YO8CLJKeztNjYkzqrxHRLNn00wIUi5w3dBpf-A.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=105&vs=1108980104778174_3931176860&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xNjQ5QTQxQzRBNjRGRTNFRDk4REZENjUxNTFGMTE5N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzFGNDlBNzlFODU0NTUzQjk0MjBDQkYxNjQ4NTg1QTgzX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9rXN2P3qm0AVAigCQzMsF0BNrtkWhysCGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=30077f98c0&ccb=9-4&oh=00_Af-EVt6KznFdo-tDDPe9TCxFCNgyN-pK3CCnm3MwJpeZIQ&oe=6A247EB2&_nc_sid=10d13b",
       "views": 5643,
       "likes": null,
-      "location": "Vizag"
+      "location": "South part of India"
     },
     {
       "id": "DYqkpkoAz-B",
@@ -236,7 +232,7 @@
       "remoteVideo": "https://scontent-dfw6-1.cdninstagram.com/o1/v/t16/f2/m86/AQPdv-R510_bCZ0O8lG3gFOxW4_2LQbG7P3y1Ti9yyiDEGc-0AaZG4obixrxJiUCPgAJnf8RNBgnc7I-g0vneFJnSA8aA5hTCT7ye8c.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuMTI3Ni5iYXNlbGluZSJ9&_nc_cat=101&vs=803532912690703_3006207426&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC83OTQyQkU2RDcyODJBNDgwOEFFQjczNDk4NEZBN0E4QV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzI0NDIxODY4QzRBMDJEQjJEQjIzNTY3M0Y4QzQ4QUEyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmzoaY0bulnwUVAigCQzMsF0A4IgxJul41GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=a4103d49eb&ccb=9-4&oh=00_Af_4Q5NpRDgwkXUGwIB5fR067LhF20xqvGbZIxogHYFmag&oe=6A24755E&_nc_sid=10d13b",
       "views": 3965,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DXbu1CIAKqD",
@@ -248,7 +244,7 @@
       "remoteVideo": "https://scontent-lga3-1.cdninstagram.com/o1/v/t16/f2/m86/AQNPjQPFa7e57HYuprsrti3ZjnyBRrr5BJLXA-W2-wmW5nsa1EQtmx-Ti0nFkPxbik3m9Q0wmphC37_Q6NFUNqVFiwFwKeJD-5i9vn8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=1314424167247651_790489335&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xMjQyRTFBQ0FGOTRCNTUyMTMxMkIzOTNGOTdBQUZBOV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzE2NEVFRDI0MDU5MUEzNDdDQzQzOTExRjU4NTQ1Qzg0X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9rCnysC8nEAVAigCQzMsF0BNUQYk3S8bGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=12900747af&ccb=9-4&oh=00_Af_uStTHpxlEn6BgvsDRva9yPChKe8OZ40kj1cL1PS2wqw&oe=6A246E17&_nc_sid=10d13b",
       "views": 3867,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DX82BxcAsPE",
@@ -260,7 +256,7 @@
       "remoteVideo": "https://scontent-sjc6-1.cdninstagram.com/o1/v/t16/f2/m86/AQPcJAP-ayVcxl-R7g15OR6RzA-Nssl9_hD1DxQVWpvTQbNbdd3V2vKnOFjKdRgSxNasyrIiPrDupX97TDZ-J6Fmq8I8bS8bNRfkDzw.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=107&vs=1448434336499241_3488424044&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DQTRCMDZDMjczRjdEREI2NEZEQTc0MkFERkRDRjlCNl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0EzNDUxNkUyNzA2MjgxMTk5OEU4ODlCQjEwOTI2NkEwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm5MmR6Ly9uwQVAigCQzMsF0A2Kn752yLRGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=89a3859d38&ccb=9-4&oh=00_Af8IaX2IHkanmj-7u64AdQaAoeDcdVC59RdmLKYGwnxjOg&oe=6A247A1C&_nc_sid=10d13b",
       "views": 3746,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DYi15ozgIaj",
@@ -272,7 +268,7 @@
       "remoteVideo": "https://scontent-hou1-1.cdninstagram.com/o1/v/t16/f2/m86/AQNPpz_MWMr8zUhXz2OQypI03G9pMTRX8fqSWbxuw6E4EcwVc4zjnmPOhSr9dHE5u-BxJF5h0l9R1KIqZlUFUTO_5mPsruDjTgrifx8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=1513125563935155_1105024311&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85NTQyMEJGRTVDREQyN0Y5MTIzMzQ3MzM3RjBFMURCMV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzkxNDIzM0FENzRBQkRBMDNGM0Q0QzM3MTA4NjVCNkE3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmyPvb4ujItgUVAigCQzMsF0BQIAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=cbedc8a6a9&ccb=9-4&oh=00_Af-glD7uymRC52uFov7sqDjfagjMufwaGGr0ocrf_chlCQ&oe=6A249698&_nc_sid=10d13b",
       "views": 3737,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DW3aiVByp_u",
@@ -284,7 +280,7 @@
       "remoteVideo": "https://scontent-atl3-2.cdninstagram.com/o1/v/t16/f2/m86/AQO5fkq_C4WmTaUtG8I1jzeIoFIyTTcXjczgPTkgt9v9OTrmLA2rYPLovEi2OORELjdlaCTwCOYRu95ElFd2j2HaiOqwj5uUxGqzx1k.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=102&vs=1704590477621197_4175706130&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8wOTQ4MzYyNUM4MzQ0MDYxRERBOUE2N0NBNDc4OEFBRV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzA3NDkzMjM4NEIzRjFCOEM2OTM3OURGMzAxQ0JBMjkxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9r6Yw5rTm0AVAigCQzMsF0A95mZmZmZmGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=9cb4ceb9f0&ccb=9-4&oh=00_Af-U1zV46yWoObnMqbSu7cgWkMV5NmcWbbdWs-2_H3FfOQ&oe=6A2495E3&_nc_sid=10d13b",
       "views": 3589,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DWfYfThgCv1",
@@ -296,7 +292,7 @@
       "remoteVideo": "https://instagram.fhyw1-1.fna.fbcdn.net/o1/v/t16/f2/m86/AQNZSKsuUAesRkm76KBCutpONzEXGWgxzcXGc7U8VPMIHNBitfNY_G_EQ8AIGCV-mOWXcndauGiKbtSgr9HKCAl3bI7kLVvWdY791XE.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzEuNzIwLmJhc2VsaW5lIn0&_nc_cat=102&vs=825029796611394_1984145882&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BNjRDMDQ3MjM0NUU4MjNBQUJFRTBDRDYxQjhBNkE4NF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0I3NDJFQzcyMjE0QTc0QTI2NjVDMkQ5NjYzMjQzQ0E2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9qaKp82Tm0AVAigCQzMsF0BRKp%2B%2Bdsi0GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=507fcc255c&ccb=9-4&oh=00_Af9c7T8Tld0O5z6kn63T0o0ax5Debf9hCyFLlqV2CtOLUw&oe=6A2482BC&_nc_sid=10d13b",
       "views": 3516,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DXA1YZlAMTc",
@@ -308,7 +304,7 @@
       "remoteVideo": "https://scontent-dfw5-1.cdninstagram.com/o1/v/t16/f2/m86/AQPuXxapOaDZ3-H61YGFZy84HJk9VVuOhfmAf9Nzx8brQq8uA4ZqwAqDjkGAuZ_fw1LjycYSec0kIR7xKPVrDvHp4N4C36PIBNGqti0.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=105&vs=4437642546473461_4007954257&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80NjQ5NDVFNjQ3ODk4RkMzQTcwODA5NDBBQTI2RDU4M192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzcyNEE1RkQ5OEFDMkFBNTI3Q0IzMTQwRTlGOTQyQzk5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9uv2wffxm0AVAigCQzMsF0BNszMzMzMzGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=c55f74d84d&ccb=9-4&oh=00_Af9qWf-E883hkX4OOvtb9YYqtIfZZ-z1bK-GYUiT0f8rEw&oe=6A2476B8&_nc_sid=10d13b",
       "views": 3227,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DXvOAfzAl1B",
@@ -320,7 +316,7 @@
       "remoteVideo": "https://scontent-hou1-1.cdninstagram.com/o1/v/t16/f2/m86/AQMoBvJ4avn8D7Qg2wd1THnH3HV0XmjdwTa3gjGVGhRbVNjFv8UPS3SMD6V36E44Y2mLxpguvYt8T3VEZTD1JLswi7DO4tXKBUSUQP4.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=1518524276339346_3780676446&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yMzRDREQ3NjczMDg0MDk2RDIzNTRCNUYxRTY4NzVBNF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzIxNDE1RDQ0NEM0OTBCMTMwM0ZFQzBFMTQ2QzM3QkE4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm%2BKWZguTwzwUVAigCQzMsF0BRQAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=580ec90f96&ccb=9-4&oh=00_Af9sgB51xEOrPTYTQNXkxr3Ix85ZZshqSaE3ja5YLf0nNA&oe=6A2490A0&_nc_sid=10d13b",
       "views": 2950,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DW6gjUXgIa7",
@@ -332,7 +328,7 @@
       "remoteVideo": "https://scontent-sjc6-1.cdninstagram.com/o1/v/t16/f2/m86/AQPz7eXmPc3QkVkAjoBUvKiSeUWjQ_JHtPbSMtA5ybO3F-oAfeSZt9qaenUQ7JPuBERyJ9QswWn9Z2Vif0DW3yAB3OXVcYV80tWrXJs.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=108&vs=1597343124658778_441945561&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9FNzQxQzNEMDZGMzgwM0Q4RUFENkYxNEFDQTIwMzVBRl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzM0NEIxQTc1QTk4NTIwRDRDRUE0M0VEOUQ5RjE5MEIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9vbbgLzgm0AVAigCQzMsF0BRCIMSbpeNGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=f166e7b1af&ccb=9-4&oh=00_Af8oVZqYgS5GdpQsv1V4KTHDHChRWZrR8t1h8l1Yc1FyVw&oe=6A249B6A&_nc_sid=10d13b",
       "views": 2607,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DY_GmSLAgQ5",
@@ -344,7 +340,7 @@
       "remoteVideo": "https://scontent-phl2-1.cdninstagram.com/o1/v/t16/f2/m86/AQP7eTaOcnlJOykT_IDlLbVoWSa7Gxe92Tl0sNkprUbxGdMeOIt69h33XrnxJZWHqlVxEintiGyLhWtiTvtJ--yZvbfGbCdQCxZ6QpI.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=103&vs=1004495442438730_2140865619&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DMjRDQjg0NDYzNjk4QkU5MjcwNjlGQTdBRUU1MkJBRV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzRGNDA3OEI2MkU5OTAwQzMxMTg1QUFGODhGNUFDNkJCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmzLDUmc3QuQQVAigCQzMsF0A8ZmZmZmZmGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=e800b42ab0&ccb=9-4&oh=00_Af9BCZaqooiCm-VxoxpNT6l9k_RwvJgqR2mQBm6XYFHMZA&oe=6A247CD8&_nc_sid=10d13b",
       "views": 2512,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DYgaJtygQyt",
@@ -356,7 +352,7 @@
       "remoteVideo": "https://scontent-den2-1.cdninstagram.com/o1/v/t16/f2/m86/AQOTr-MekzocBszAG4wCaKKMRyetAGKEPC_allp8zooBxf7bOiFo17MLab1TI6pPHFeBfvSkIPDtsxSiV8ve8w-xPSJ-e9OpIjNnqZI.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=2238127620262157_1215574816&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80ODQ5OTRCQjY2NzY4QjQ4Rjk5MUY1RDEyMzQyRUY5Rl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Q5NEFENzJDRjczNjQyQzY3ODRBMEIzMUFFQjU4MEFGX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm6qXZ8ufVsxEVAigCQzMsF0Aud0vGp%2B%2BeGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=2613a2b44f&ccb=9-4&oh=00_Af-2sjr5EiBCsOwFmrfj7PdvQ40NCipCBag0LjJ54AWN1w&oe=6A246A1A&_nc_sid=10d13b",
       "views": 2318,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DXIiaR2gJGz",
@@ -368,7 +364,7 @@
       "remoteVideo": "https://scontent-lax3-2.cdninstagram.com/o1/v/t16/f2/m86/AQOU2kIB6HDsFMFJWG_oAkI38_uRifpxN4Bf6VbUitwkbPgCun_C6kw0NeOS964LvbwEKoLe3QAPNkyBIEUbOGNhXRw70gXSboHEb94.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=107&vs=2077955972761555_3034839445&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84RTQ4QjIyRDlFQkU0OTc3RUJCQUJBNURDNzlDQ0Y4M192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzgyNEQ1NURBNzk0NzM0QUVEREUxOEU2REI3QTJFMEFBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9tKok56GnEAVAigCQzMsF0A6iHKwIMScGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=4ae2fb9438&ccb=9-4&oh=00_Af8OD8wFUG9ulFPTq1q0Rpx1gUmpcu_XMASNRvbYVCyKpw&oe=6A247D01&_nc_sid=10d13b",
       "views": 2177,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DYUTyc4A_6m",
@@ -380,7 +376,7 @@
       "remoteVideo": "https://scontent-den2-1.cdninstagram.com/o1/v/t16/f2/m86/AQOW4WRWBD8AFS7bUf6WrMiMYJT93LGB9aJPAaoGJqBK-ZeG9QKkPKyQWAdK1eKiXwe4OPnRny_yhoUdQtFyNIMvQDR3uClDHEwPiPs.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=2286503641873401_723545153&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9EMDRENTM5QUEyMjY1RERFQzU1NjM4MUFGRTJDMkNBNl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Q3NENBM0EwNENENDc5MEQ1QkUxOUNCNkNBMjQ3QkE2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmzp3Wqt6upg8VAigCQzMsF0BLDMzMzMzNGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=2faabb247a&ccb=9-4&oh=00_Af9R-KCQNawrpIey1y8PJnrkdFhDz9p4LTxa_GrthHnPTg&oe=6A2498AE&_nc_sid=10d13b",
       "views": 1608,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DYlUvnUAXYU",
@@ -392,7 +388,7 @@
       "remoteVideo": "https://scontent-atl3-2.cdninstagram.com/o1/v/t16/f2/m86/AQPDetJK-hhan8RnjKy2DRuqO69bK_hfuikuVH0rm045vfa-zj_7PrdMXto4Yki0g8kX5q2Hs7LeMO-KQakgnrMvSHOXV5EFJ-4wF9g.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=105&vs=1265902032196446_2697296683&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85MzQzNTczMjk4Qzk5RTBDNjVFQzc3RTcwMjA2OUQ4NF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBBNDJBMDM2MDBDRTE5QjE1RkNGMzgwMDMwRjJGODlEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm2oX7sOTj3AcVAigCQzMsF0BLmZmZmZmaGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=1aa08f8fc2&ccb=9-4&oh=00_Af89zTpNrZQnzLmnz4W5CQs18IiZg_2R5nwQjN2aKa2F-Q&oe=6A248855&_nc_sid=10d13b",
       "views": 1579,
       "likes": null,
-      "location": "Visakhapatnam City of Destiny"
+      "location": "South part of India"
     },
     {
       "id": "DXMJWweAPoa",
@@ -404,7 +400,7 @@
       "remoteVideo": "https://scontent-iad6-1.cdninstagram.com/o1/v/t16/f2/m86/AQNqaQV5ZExJzta_3YkXoOgzt2pBchzPxTp6eoyx8hZ7ULWNm4wtifIgMcDxysy5cGHbR60st2luTCrcarcewVei-NmeuS7Y7FEXqAQ.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=107&vs=1285238603553430_662793947&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yRDRFNThGNTUzQTlEMDNEOEY1QTEyQUQwRDAzODhBRF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Y1NEQ4MTNCMTE2RERFOTkyQTY2QTcxQkU5NzRDRUI2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9tS14s2PnEAVAigCQzMsF0A3XbItDlYEGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=1619e5edb7&ccb=9-4&oh=00_Af_VVeGwVSPVcM6OuZkyTIJmxBmLCo_N4QrMvNNHRKYZYQ&oe=6A247F6B&_nc_sid=10d13b",
       "views": 1430,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DYe4Cl6S5nQ",
@@ -416,7 +412,7 @@
       "remoteVideo": "https://scontent-lga3-1.cdninstagram.com/o1/v/t16/f2/m86/AQMqJ7BZ2yRKIY75HZWGTabDvoVPhLOyhZe5PZLM3w4hLxuJ9ZxGvyZJuM7ylMmXB3MHHwTsRUM1Sxr9_1dO-_m9ZREnmPHwWubqg80.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=110&vs=954189437495951_1866787948&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80RTQyNUExRDRFREUxMkM3RkRFODE4MjNCNjc0Q0NBMF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzU1NEE5RUY1QzQwQTVEMDhFQkU0RkQwMUZCQ0RFRDk0X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmmKLl0JfsxwMVAigCQzMsF0BNkQYk3S8bGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=18ade7369c&ccb=9-4&oh=00_Af9BMDKKVMclC78oH3UTAWJV4TcN7xQ7QGcEmqVLSlr6EQ&oe=6A247B8B&_nc_sid=10d13b",
       "views": 1389,
       "likes": null,
-      "location": "Visakhapatnam"
+      "location": "South part of India"
     },
     {
       "id": "DYV8WcDg-Em",

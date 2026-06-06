@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { getWhatsAppUrl } from "@/config/site";
 import content from "@/data/content.json";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 export function Services() {
+  const { openModal } = useWhatsApp();
   return (
     <section id="services" className="border-y border-white/5 bg-[#141416]/50 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
@@ -49,14 +50,12 @@ export function Services() {
               <p className="mt-3 text-sm leading-relaxed text-[#9a9590]">
                 {service.description}
               </p>
-              <a
-                href={getWhatsAppUrl(`Hi! I need a ${service.name} reel. My date is `)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => openModal(`Hi! I need a ${service.name} reel. My date is `)}
                 className="mt-5 inline-block text-sm font-medium text-[#e8c547] transition-opacity group-hover:opacity-80"
               >
                 Enquire for this service →
-              </a>
+              </button>
             </motion.div>
           ))}
         </div>

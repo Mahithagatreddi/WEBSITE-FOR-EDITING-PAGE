@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
-import { getWhatsAppUrl, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 export function Contact() {
+  const { openModal } = useWhatsApp();
   return (
     <section id="contact" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
@@ -23,17 +24,15 @@ export function Contact() {
             </h2>
             <p className="mt-4 text-[#9a9590]">
               Send your event date and the kind of reel you want. I reply on WhatsApp
-              with availability and a clear price. {siteConfig.turnaround}.
+              with availability and a clear price.
             </p>
 
-            <a
-              href={getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => openModal()}
               className="mt-8 inline-flex items-center justify-center rounded-full bg-[#e8c547] px-8 py-4 text-sm font-semibold text-[#0a0a0b] transition-transform hover:scale-[1.02]"
             >
               Message on WhatsApp
-            </a>
+            </button>
 
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-[#9a9590]">
               <a

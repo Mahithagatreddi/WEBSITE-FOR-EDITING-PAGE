@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "RJ Editzzz",
   legalName: "Rj the editor",
   tagline: "Video Editor",
-  city: "Visakhapatnam",
-  region: "Vizag, Andhra Pradesh",
+  city: "South part of India",
+  region: "South part of India",
   instagram: "https://www.instagram.com/rjeditzzz_/",
   instagramHandle: "@rjeditzzz_",
 
@@ -12,10 +12,10 @@ export const siteConfig = {
   whatsappMessage:
     "Hi RJ Editzzz! I saw your website and want to book a reel. My event is on [date] and I need [wedding / birthday / brand / event].",
 
-  email: "rjeditzzz@gmail.com", // guessed placeholder, owner should confirm
+  email: "rjeditzzz1807@gmail.com", // guessed placeholder, owner should confirm
   emailGuessed: true,
 
-  turnaround: "24 hour rush available",
+  turnaround: "",
   colors: {
     background: "#0a0a0b",
     surface: "#141416",

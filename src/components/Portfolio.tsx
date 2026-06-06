@@ -1,29 +1,55 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { VideoCard } from "@/components/VideoCard";
+import { VideoCard, PortfolioItem } from "@/components/VideoCard";
 import content from "@/data/content.json";
 
 export function Portfolio() {
   const [active, setActive] = useState("All");
+  const [dbReels, setDbReels] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("/api/reels")
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          // Format them to match PortfolioItem
+          const formatted = data.map((r: any) => ({
+            id: r._id,
+            title: r.title,
+            category: r.category,
+            remoteVideo: r.videoUrl,
+            video: r.videoUrl, // Use remote video as fallback
+            views: r.views,
+            likes: r.reach, // map reach to likes or omit
+            location: r.location
+          }));
+          setDbReels(formatted);
+        }
+      })
+      .catch((err) => console.error("Reels fetch error:", err));
+  }, []);
+
+  const sourceReels = dbReels.length > 0 ? dbReels : content.portfolio;
   const filters = ["All", ...content.categories];
-  const filtered =
-    active === "All"
-      ? content.portfolio
-      : content.portfolio.filter((p) => p.category === active);
+
+  const filtered = useMemo(() => {
+    return active === "All"
+      ? sourceReels
+      : sourceReels.filter((p: any) => p.category === active);
+  }, [active, sourceReels]);
 
   return (
     <section id="work" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-10 md:mb-14">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#e8c547]">Portfolio</p>
           <h2 className="mt-3 font-[family-name:var(--font-syne)] text-3xl font-bold tracking-tight md:text-5xl">
             Real edits. Real clients.
           </h2>
           <p className="mt-4 max-w-xl text-[#9a9590]">
             Every reel below is from Instagram. Tap to play. These are the moments
-            Vizag trusts me to cut.
+            South part of India trusts me to cut.
           </p>
         </div>
 

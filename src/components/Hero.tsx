@@ -4,12 +4,15 @@ import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import { HeroBackground } from "@/components/HeroBackground";
-import { getWhatsAppUrl, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 import content from "@/data/content.json";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 const hero = content.hero;
 
 export function Hero() {
+  const { openModal } = useWhatsApp();
+
   return (
     <section className="relative min-h-[100dvh] overflow-hidden">
       <HeroBackground
@@ -51,14 +54,12 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href={getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => openModal()}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#e8c547] px-7 py-4 text-sm font-semibold text-[#0a0a0b] transition-transform hover:scale-[1.02] active:scale-[0.98]"
             >
               Book your slot on WhatsApp
-            </a>
+            </button>
             <a
               href="#work"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm font-medium text-[#f5f2eb] transition-colors hover:border-white/30"

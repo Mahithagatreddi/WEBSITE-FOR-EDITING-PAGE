@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import { WhatsAppProvider } from "@/components/WhatsAppProvider";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -16,12 +17,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Video Editor in Vizag`,
+  title: `${siteConfig.name} | Video Editor in South part of India`,
   description:
-    "Cinematic reels for weddings, birthdays, brands, and events in Visakhapatnam. Shot on iPhone. 24 hour turnaround available.",
+    "Cinematic reels for weddings, birthdays, brands, and events in South part of India. Shot on iPhone.",
   openGraph: {
-    title: siteConfig.name,
-    description: "Cinematic video edits in Vizag",
+    title: `${siteConfig.name} | Video Editor in South part of India`,
+    description: "Cinematic video edits in South part of India",
     images: ["/photos/profile.jpg"],
   },
 };
@@ -39,9 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
-      <body className="antialiased">
-        <div className="grain" aria-hidden="true" />
-        {children}
+      <body className="bg-background text-text antialiased">
+        <WhatsAppProvider>
+          <div className="grain" aria-hidden="true" />
+          {children}
+        </WhatsAppProvider>
       </body>
     </html>
   );

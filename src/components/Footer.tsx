@@ -7,7 +7,7 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.region}.
         </p>
-        <p>Shot on iPhone. Edited in Vizag.</p>
+        <p>Shot on iPhone. Edited in South part of India.</p>
       </div>
     </footer>
   );
