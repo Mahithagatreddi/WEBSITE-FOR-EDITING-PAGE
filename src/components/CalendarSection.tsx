@@ -26,9 +26,6 @@ export function CalendarSection() {
     return evDate >= now && evDate <= twoWeeksFromNow;
   });
 
-  if (events.length === 0) {
-    return null; // Hide section if no events
-  }
 
   return (
     <section className="bg-[#0a0a0b] py-20 md:py-28">
