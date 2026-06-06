@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Calendar as CalendarIcon, MapPin } from "lucide-react";
+import { FullCalendar } from "@/components/FullCalendar";
 
 export function CalendarSection() {
   const [events, setEvents] = useState<any[]>([]);
@@ -66,26 +67,9 @@ export function CalendarSection() {
             )}
           </div>
 
-          {/* Full Calendar List */}
-          <div className="rounded-2xl border border-white/10 bg-[#141416] p-6 md:p-8">
-            <h3 className="mb-6 font-[family-name:var(--font-syne)] text-2xl font-bold text-[#f5f2eb]">
-              All Confirmed Dates
-            </h3>
-            <div className="grid gap-4">
-              {events.map((ev) => (
-                <div key={ev._id} className="flex items-center justify-between border-b border-white/5 pb-4 last:border-0 last:pb-0">
-                  <div>
-                    <p className="font-bold text-[#f5f2eb]">{ev.title}</p>
-                    <p className="text-sm text-[#9a9590]">{ev.details}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm font-medium text-[#e8c547]">
-                      {new Date(ev.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Full Calendar Grid */}
+          <div className="md:col-span-2">
+            <FullCalendar events={events} />
           </div>
         </div>
       </div>

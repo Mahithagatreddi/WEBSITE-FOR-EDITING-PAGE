@@ -5,12 +5,14 @@ export interface IEvent extends Document {
   title: string;
   date: Date;
   details: string;
+  category: string;
 }
 
 const EventSchema: Schema = new Schema({
   title: { type: String, required: true },
   date: { type: Date, required: true },
   details: { type: String, required: true },
+  category: { type: String, default: "Event" },
 }, { timestamps: true });
 
 export const EventModel = mongoose.models.Event || mongoose.model<IEvent>("Event", EventSchema);
@@ -23,6 +25,7 @@ export interface IReel extends Document {
   views: number;
   reach: number;
   location?: string;
+  order: number;
 }
 
 const ReelSchema: Schema = new Schema({
@@ -32,6 +35,7 @@ const ReelSchema: Schema = new Schema({
   views: { type: Number, default: 0 },
   reach: { type: Number, default: 0 },
   location: { type: String, required: false },
+  order: { type: Number, default: 0 },
 }, { timestamps: true });
 
 export const ReelModel = mongoose.models.Reel || mongoose.model<IReel>("Reel", ReelSchema);

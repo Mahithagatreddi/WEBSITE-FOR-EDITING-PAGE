@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Calendar, Film, MessageCircle, LogOut, Plus, Trash } from "lucide-react";
+import { Calendar, Film, MessageCircle, LogOut, Plus, Trash, GripVertical } from "lucide-react";
+import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
 
 export default function AdminPortal() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -39,7 +40,10 @@ export default function AdminPortal() {
 
   const fetchData = async () => {
     fetch("/api/events").then((res) => res.json()).then((data) => setEvents(Array.isArray(data) ? data : []));
-    fetch("/api/reels").then((res) => res.json()).then((data) => setReels(Array.isArray(data) ? data : []));
+    fetch("/api/reels").then((res) => res.json()).then((data) => {
+      const sortedReels = Array.isArray(data) ? data.sort((a, b) => (a.order || 0) - (b.order || 0)) : [];
+      setReels(sortedReels);
+    });
     fetch("/api/enquiries").then((res) => res.json()).then((data) => setEnquiries(Array.isArray(data) ? data : []));
   };
 
@@ -62,6 +66,7 @@ export default function AdminPortal() {
       title: target.title.value,
       date: target.date.value,
       details: target.details.value,
+      category: target.category.value,
     };
     await fetch("/api/events", {
       method: "POST",
@@ -99,6 +104,22 @@ export default function AdminPortal() {
     if (!confirm("Are you sure?")) return;
     await fetch(`/api/reels/${id}`, { method: "DELETE" });
     fetchData();
+  };
+
+  const onDragEnd = async (result: DropResult) => {
+    if (!result.destination) return;
+    const items = Array.from(reels);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    setReels(items);
+
+    const orderData = items.map((item, index) => ({ id: item._id, order: index }));
+    await fetch("/api/reels/order", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(orderData),
+    });
   };
 
   if (!isAuthenticated) {
@@ -171,10 +192,16 @@ export default function AdminPortal() {
           {activeTab === "calendar" && (
             <div>
               <h2 className="mb-4 text-xl font-bold">Manage Calendar Events</h2>
-              <form onSubmit={addEvent} className="mb-8 grid gap-4 md:grid-cols-4">
+              <form onSubmit={addEvent} className="mb-8 grid gap-4 md:grid-cols-5">
                 <input required name="title" type="text" placeholder="Event Title" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
                 <input required name="date" type="date" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
                 <input required name="details" type="text" placeholder="Details/Location" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
+                <select required name="category" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2 text-white">
+                  <option value="Wedding">Wedding</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Brand">Brand</option>
+                  <option value="Event">Event</option>
+                </select>
                 <button type="submit" className="flex items-center justify-center gap-2 rounded-lg bg-[#e8c547] text-black font-semibold"><Plus className="h-4 w-4"/> Add Event</button>
               </form>
               <div className="grid gap-4">
@@ -182,7 +209,7 @@ export default function AdminPortal() {
                   <div key={ev._id} className="flex items-center justify-between rounded-lg border border-white/10 p-4">
                     <div>
                       <p className="font-bold">{ev.title}</p>
-                      <p className="text-sm text-[#9a9590]">{new Date(ev.date).toLocaleDateString()} - {ev.details}</p>
+                      <p className="text-sm text-[#9a9590]">{new Date(ev.date).toLocaleDateString()} - {ev.details} <span className="text-[#e8c547]">({ev.category || "Event"})</span></p>
                     </div>
                     <button onClick={() => deleteEvent(ev._id)} className="text-red-400 hover:text-red-300"><Trash className="h-4 w-4"/></button>
                   </div>
@@ -200,17 +227,44 @@ export default function AdminPortal() {
                 <input required name="videoUrl" type="url" placeholder="Video URL (.mp4)" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
                 <button type="submit" className="flex items-center justify-center gap-2 rounded-lg bg-[#e8c547] text-black font-semibold"><Plus className="h-4 w-4"/> Add Reel</button>
               </form>
-              <div className="grid gap-4">
-                {reels.map((reel) => (
-                  <div key={reel._id} className="flex items-center justify-between rounded-lg border border-white/10 p-4">
-                    <div>
-                      <p className="font-bold">{reel.title}</p>
-                      <p className="text-sm text-[#9a9590]">{reel.category} | {reel.views} Views</p>
-                    </div>
-                    <button onClick={() => deleteReel(reel._id)} className="text-red-400 hover:text-red-300"><Trash className="h-4 w-4"/></button>
-                  </div>
-                ))}
+              
+              <div className="mb-4 rounded border border-[#e8c547]/30 bg-[#e8c547]/10 p-3 text-sm text-[#e8c547]">
+                <strong>Pro Tip:</strong> You can drag and drop these reels to change the order they appear on the main website!
               </div>
+
+              <DragDropContext onDragEnd={onDragEnd}>
+                <Droppable droppableId="reelsList">
+                  {(provided) => (
+                    <div {...provided.droppableProps} ref={provided.innerRef} className="grid gap-4">
+                      {reels.map((reel, index) => (
+                        <Draggable key={reel._id} draggableId={reel._id} index={index}>
+                          {(provided) => (
+                            <div
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              className="flex items-center justify-between rounded-lg border border-white/10 bg-[#141416] p-4 shadow-sm transition hover:border-white/20"
+                            >
+                              <div className="flex items-center gap-4">
+                                <div {...provided.dragHandleProps} className="text-[#9a9590] hover:text-white cursor-grab active:cursor-grabbing">
+                                  <GripVertical className="h-5 w-5" />
+                                </div>
+                                <div>
+                                  <p className="font-bold">{reel.title}</p>
+                                  <p className="text-sm text-[#9a9590]">{reel.category}</p>
+                                </div>
+                              </div>
+                              <button onClick={() => deleteReel(reel._id)} className="text-red-400 hover:text-red-300">
+                                <Trash className="h-4 w-4" />
+                              </button>
+                            </div>
+                          )}
+                        </Draggable>
+                      ))}
+                      {provided.placeholder}
+                    </div>
+                  )}
+                </Droppable>
+              </DragDropContext>
             </div>
           )}
 

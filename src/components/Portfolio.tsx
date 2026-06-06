@@ -13,9 +13,11 @@ export function Portfolio() {
     fetch("/api/reels")
       .then((res) => res.json())
       .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
+        if (Array.isArray(data)) {
+          // Sort by order ascending
+          const sorted = data.sort((a, b) => (a.order || 0) - (b.order || 0));
           // Format them to match PortfolioItem
-          const formatted = data.map((r: any) => ({
+          const formatted = sorted.map((r: any) => ({
             id: r._id,
             title: r.title,
             category: r.category,
