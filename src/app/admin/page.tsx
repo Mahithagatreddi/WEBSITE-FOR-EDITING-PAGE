@@ -38,9 +38,9 @@ export default function AdminPortal() {
   };
 
   const fetchData = async () => {
-    fetch("/api/events").then((res) => res.json()).then(setEvents);
-    fetch("/api/reels").then((res) => res.json()).then(setReels);
-    fetch("/api/enquiries").then((res) => res.json()).then(setEnquiries);
+    fetch("/api/events").then((res) => res.json()).then((data) => setEvents(Array.isArray(data) ? data : []));
+    fetch("/api/reels").then((res) => res.json()).then((data) => setReels(Array.isArray(data) ? data : []));
+    fetch("/api/enquiries").then((res) => res.json()).then((data) => setEnquiries(Array.isArray(data) ? data : []));
   };
 
   useEffect(() => {
@@ -48,11 +48,11 @@ export default function AdminPortal() {
     fetch("/api/enquiries").then((res) => {
       if (res.ok) {
         setIsAuthenticated(true);
-        res.json().then(setEnquiries);
-        fetch("/api/events").then((res) => res.json()).then(setEvents);
-        fetch("/api/reels").then((res) => res.json()).then(setReels);
+        res.json().then((data) => setEnquiries(Array.isArray(data) ? data : []));
+        fetch("/api/events").then((r) => r.json()).then((data) => setEvents(Array.isArray(data) ? data : []));
+        fetch("/api/reels").then((r) => r.json()).then((data) => setReels(Array.isArray(data) ? data : []));
       }
-    });
+    }).catch(console.error);
   }, []);
 
   const addEvent = async (e: React.FormEvent) => {
