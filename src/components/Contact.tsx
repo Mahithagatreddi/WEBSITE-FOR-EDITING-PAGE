@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 
