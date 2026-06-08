@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import connectToDatabase from "@/lib/mongodb";
 import { EventModel } from "@/lib/models";
 import { cookies } from "next/headers";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
