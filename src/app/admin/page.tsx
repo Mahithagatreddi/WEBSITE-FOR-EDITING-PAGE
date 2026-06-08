@@ -90,6 +90,7 @@ export default function AdminPortal() {
       title: target.title.value,
       category: target.category.value,
       videoUrl: target.videoUrl.value,
+      views: parseInt(target.views.value) || 0,
     };
     await fetch("/api/reels", {
       method: "POST",
@@ -221,10 +222,11 @@ export default function AdminPortal() {
           {activeTab === "reels" && (
             <div>
               <h2 className="mb-4 text-xl font-bold">Manage Reels</h2>
-              <form onSubmit={addReel} className="mb-8 grid gap-4 md:grid-cols-4">
+              <form onSubmit={addReel} className="mb-8 grid gap-4 md:grid-cols-5">
                 <input required name="title" type="text" placeholder="Reel Title" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
                 <input required name="category" type="text" placeholder="Category (e.g. Wedding)" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
-                <input required name="videoUrl" type="url" placeholder="Video URL (.mp4)" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
+                <input required name="videoUrl" type="url" placeholder="Insta Link OR .mp4 URL" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
+                <input name="views" type="number" placeholder="Views (e.g. 10000)" className="rounded-lg border border-white/10 bg-black/50 px-4 py-2" />
                 <button type="submit" className="flex items-center justify-center gap-2 rounded-lg bg-[#e8c547] text-black font-semibold"><Plus className="h-4 w-4"/> Add Reel</button>
               </form>
               

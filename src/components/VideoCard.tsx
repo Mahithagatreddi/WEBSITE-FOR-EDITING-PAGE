@@ -97,7 +97,7 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
 
       {!playing && !videoError && (
         <>
-          {!thumbError ? (
+          {!thumbError && item.thumbnail ? (
             <img
               src={item.thumbnail}
               alt={item.title}
@@ -134,11 +134,12 @@ export function VideoCard({ item }: { item: PortfolioItem }) {
 
       {videoError && (
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 p-4">
+          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#1c1c1f] to-[#0a0a0b]" />
           <a
-            href={`https://www.instagram.com/p/${item.id}/`}
+            href={item.video.includes("instagram.com") ? item.video : "https://www.instagram.com/rjeditzzz_/"}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full bg-[#e8c547] px-4 py-2 text-xs font-semibold text-[#0a0a0b]"
+            className="flex items-center gap-2 rounded-full bg-[#e8c547] px-4 py-2 text-xs font-semibold text-[#0a0a0b] hover:bg-[#d6b53e] transition"
           >
             <ExternalLink className="h-3.5 w-3.5" />
             Watch on Instagram
