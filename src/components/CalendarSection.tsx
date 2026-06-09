@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Calendar as CalendarIcon, MapPin } from "lucide-react";
-import { FullCalendar } from "@/components/FullCalendar";
+import dynamic from "next/dynamic";
+
+const FullCalendar = dynamic(
+  () => import("@/components/FullCalendar").then((mod) => mod.FullCalendar),
+  { ssr: false }
+);
 
 export function CalendarSection() {
   const [events, setEvents] = useState<any[]>([]);
