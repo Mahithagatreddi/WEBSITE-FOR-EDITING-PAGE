@@ -10,7 +10,7 @@
   "stats": [
     {
       "label": "Followers",
-      "value": "2,199+"
+      "value": "2200+"
     },
     {
       "label": "Projects",
@@ -30,12 +30,20 @@
         {
           "name": "Standard plan",
           "price": "2999/-",
-          "features": ["Vehicle Delivery", "1 reel only"]
+          "features": [
+            "Vehicle Delivery",
+            "1 reel only"
+          ]
         },
         {
           "name": "Premium plan",
           "price": "5499/-",
-          "features": ["Vehicle delivery", "Vehicle elevation shoot", "Vehicle with person elevation shoot", "Upto 4 reels"]
+          "features": [
+            "Vehicle delivery",
+            "Vehicle elevation shoot",
+            "Vehicle with person elevation shoot",
+            "Upto 4 reels"
+          ]
         }
       ]
     },
@@ -46,17 +54,37 @@
         {
           "name": "Basic plan",
           "price": "6999/-",
-          "features": ["Haldi", "Wedding", "2 Upto 3 reels"]
+          "features": [
+            "Haldi",
+            "Wedding",
+            "2 Upto 3 reels"
+          ]
         },
         {
           "name": "Standard plan",
           "price": "12999/-",
-          "features": ["Groom and bride ceremony", "Haldi", "Sangeet", "Reception", "Wedding", "6 upto 8 reels"]
+          "features": [
+            "Groom and bride ceremony",
+            "Haldi",
+            "Sangeet",
+            "Reception",
+            "Wedding",
+            "6 upto 8 reels"
+          ]
         },
         {
           "name": "Premium plan",
           "price": "21999/-",
-          "features": ["Engagement", "Godhum raya", "Groom and bride ceremony", "Haldi", "Sangeet", "Reception", "Wedding", "10 upto 15 reels"]
+          "features": [
+            "Engagement",
+            "Godhum raya",
+            "Groom and bride ceremony",
+            "Haldi",
+            "Sangeet",
+            "Reception",
+            "Wedding",
+            "10 upto 15 reels"
+          ]
         }
       ]
     },
@@ -67,12 +95,22 @@
         {
           "name": "Standard plan",
           "price": "3999/-",
-          "features": ["Pooja", "Housewarming ceremony", "2 reels only"]
+          "features": [
+            "Pooja",
+            "Housewarming ceremony",
+            "2 reels only"
+          ]
         },
         {
           "name": "Premium plan",
           "price": "5999/-",
-          "features": ["Pooja", "Housewarming ceremony", "Interior shoot", "Total even full video upto 3mins", "3 reels + 1 video"]
+          "features": [
+            "Pooja",
+            "Housewarming ceremony",
+            "Interior shoot",
+            "Total even full video upto 3mins",
+            "3 reels + 1 video"
+          ]
         }
       ]
     },
@@ -83,7 +121,9 @@
         {
           "name": "Custom Plan",
           "price": "Starting 1499/- !!",
-          "features": ["Depends on your content !!"]
+          "features": [
+            "Depends on your content !!"
+          ]
         }
       ]
     }
@@ -165,6 +205,18 @@
       "remoteVideo": "https://scontent-mia3-3.cdninstagram.com/o1/v/t16/f2/m86/AQPOPk1U-hrlar6tUnhlH_PaVvYTgmSQlpp3P9SslJm37jrVVzITIAW3kLoIMxNJJa-dzVqEG4Ne9kydDNCwSIkIzPqXzhQjbmlW5kE.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=109&vs=4017932441684756_2300750860&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BQzQ2QTk1QjgzMzc0M0YxQzIyODc3NTA5MkVCOTk5RV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzc3NDA0RjE4QzRDMDZFMENFMUVCQ0MyODA1NzZGQ0E2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm3OLM5ePL5j8VAigCQzMsF0BM%2B6XjU%2FfPGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=025454eadb&ccb=9-4&oh=00_Af8vvTyxtvmzIJi1ABQLbuGH16jlOK1ENBy_7aocEEDrRg&oe=6A247B3E&_nc_sid=10d13b",
       "views": 18571,
       "likes": 819,
+      "location": "South part of India"
+    },
+    {
+      "id": "DV5AX6OgAif",
+      "title": "New Reel",
+      "category": "Reels",
+      "thumbnail": "/photos/DV5AX6OgAif.jpg",
+      "video": "/vids/DV5AX6OgAif.mp4",
+      "proxyVideo": "/api/reel/DV5AX6OgAif",
+      "remoteVideo": "https://www.instagram.com/reel/DV5AX6OgAif/",
+      "views": 15000,
+      "likes": null,
       "location": "South part of India"
     },
     {
