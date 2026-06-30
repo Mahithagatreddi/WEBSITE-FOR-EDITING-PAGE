@@ -21,30 +21,71 @@
       "value": "South part of India"
     }
   ],
-  "services": [
+  "budgetPlans": [
     {
-      "name": "Wedding Reels",
-      "description": "Sangeet, haldi, reception, and pre-wedding films cut for emotion and shareability.",
-      "fromPrice": "\u20b94,999",
-      "guessed": true
+      "category": "Product budget plans",
+      "subtitle": "(example Bike, car)",
+      "tagline": "Premium quality. Affordable prices",
+      "plans": [
+        {
+          "name": "Standard plan",
+          "price": "2999/-",
+          "features": ["Vehicle Delivery", "1 reel only"]
+        },
+        {
+          "name": "Premium plan",
+          "price": "5499/-",
+          "features": ["Vehicle delivery", "Vehicle elevation shoot", "Vehicle with person elevation shoot", "Upto 4 reels"]
+        }
+      ]
     },
     {
-      "name": "Birthday & Celebration",
-      "description": "Beach birthdays, surprise parties, and milestone edits your guests will replay.",
-      "fromPrice": "\u20b92,499",
-      "guessed": true
+      "category": "Wedding Budget plans",
+      "tagline": "Premium quality. Affordable prices",
+      "plans": [
+        {
+          "name": "Basic plan",
+          "price": "6999/-",
+          "features": ["Haldi", "Wedding", "2 Upto 3 reels"]
+        },
+        {
+          "name": "Standard plan",
+          "price": "12999/-",
+          "features": ["Groom and bride ceremony", "Haldi", "Sangeet", "Reception", "Wedding", "6 upto 8 reels"]
+        },
+        {
+          "name": "Premium plan",
+          "price": "21999/-",
+          "features": ["Engagement", "Godhum raya", "Groom and bride ceremony", "Haldi", "Sangeet", "Reception", "Wedding", "10 upto 15 reels"]
+        }
+      ]
     },
     {
-      "name": "Brand & Delivery Shoots",
-      "description": "Car and bike delivery reels, showroom launches, and product moments that pop on feed.",
-      "fromPrice": "\u20b93,499",
-      "guessed": true
+      "category": "House warming budget plans",
+      "tagline": "Premium quality. Affordable prices",
+      "plans": [
+        {
+          "name": "Standard plan",
+          "price": "3999/-",
+          "features": ["Pooja", "Housewarming ceremony", "2 reels only"]
+        },
+        {
+          "name": "Premium plan",
+          "price": "5999/-",
+          "features": ["Pooja", "Housewarming ceremony", "Interior shoot", "Total even full video upto 3mins", "3 reels + 1 video"]
+        }
+      ]
     },
     {
-      "name": "Events & Festivals",
-      "description": "Village festivals, corporate events, and cultural moments captured and cut fast.",
-      "fromPrice": "\u20b93,999",
-      "guessed": true
+      "category": "YouTube videos and Instagram reels budget plans",
+      "tagline": "Premium quality. Affordable prices",
+      "plans": [
+        {
+          "name": "Custom Plan",
+          "price": "Starting 1499/- !!",
+          "features": ["Depends on your content !!"]
+        }
+      ]
     }
   ],
   "process": [
