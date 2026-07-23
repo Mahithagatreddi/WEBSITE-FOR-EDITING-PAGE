@@ -1,5 +1,6 @@
 import { MediaUnlockProvider } from "@/components/MediaUnlock";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Portfolio } from "@/components/Portfolio";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <MediaUnlockProvider>
     <SmoothScroll>
+      <AnnouncementBar />
       <Header />
       <main>
         <Hero />
