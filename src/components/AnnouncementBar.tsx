@@ -21,14 +21,12 @@ export function AnnouncementBar() {
       </div>
       
       {/* SCROLLING MARQUEE */}
-      <div className="flex h-8 items-center overflow-hidden bg-gradient-to-r from-[#e8c547] via-yellow-300 to-[#e8c547] text-black font-bold text-xs md:text-sm tracking-wide border-b border-white/10">
-        <div className="flex animate-marquee whitespace-nowrap w-max hover:[animation-play-state:paused]">
-          <div className="flex items-center min-w-full justify-around pr-4">
-            {content}
-          </div>
-          <div className="flex items-center min-w-full justify-around pr-4">
-            {content}
-          </div>
+      <div className="flex h-8 items-center overflow-hidden bg-gradient-to-r from-[#e8c547] via-yellow-300 to-[#e8c547] text-black font-bold text-xs md:text-sm tracking-wide border-b border-white/10 whitespace-nowrap">
+        <div className="animate-marquee inline-block hover:[animation-play-state:paused] pr-4">
+          {content}
+        </div>
+        <div className="animate-marquee inline-block hover:[animation-play-state:paused] pr-4" aria-hidden="true">
+          {content}
         </div>
       </div>
     </div>
