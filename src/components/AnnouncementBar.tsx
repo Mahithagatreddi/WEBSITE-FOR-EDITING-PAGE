@@ -1,16 +1,19 @@
+import Marquee from "react-fast-marquee";
+
 export function AnnouncementBar() {
   const content = (
-    <>
-      <span className="mx-4">🔥 SEASONAL OFFER: PRE-BOOKING SLOTS FOR VINAYAKA CHAVITHI ARE OPEN! 🐘</span>
-      <span className="mx-4">•</span>
-      <span className="mx-4">Basic Plan: 3500/-</span>
-      <span className="mx-4">•</span>
-      <span className="mx-4">Standard Plan: 7000/-</span>
-      <span className="mx-4">•</span>
-      <span className="mx-4">Premium Plan: 12000/-</span>
-      <span className="mx-4">•</span>
-      <span className="mx-4">🚨 HURRY UP! BOOK YOUR SLOTS NOW! 🚨</span>
-    </>
+    <div className="flex items-center">
+      <span className="mx-2">🔥 SEASONAL OFFER: PRE-BOOKING SLOTS FOR VINAYAKA CHAVITHI ARE OPEN! 🐘</span>
+      <span className="mx-2">•</span>
+      <span className="mx-2">Basic Plan: 3500/-</span>
+      <span className="mx-2">•</span>
+      <span className="mx-2">Standard Plan: 7000/-</span>
+      <span className="mx-2">•</span>
+      <span className="mx-2">Premium Plan: 12000/-</span>
+      <span className="mx-2">•</span>
+      <span className="mx-2">🚨 HURRY UP! BOOK YOUR SLOTS NOW! 🚨</span>
+      <span className="mx-2 w-4"></span>
+    </div>
   );
 
   return (
@@ -21,13 +24,10 @@ export function AnnouncementBar() {
       </div>
       
       {/* SCROLLING MARQUEE */}
-      <div className="flex h-8 items-center overflow-hidden bg-gradient-to-r from-[#e8c547] via-yellow-300 to-[#e8c547] text-black font-bold text-xs md:text-sm tracking-wide border-b border-white/10 whitespace-nowrap">
-        <div className="animate-marquee inline-block hover:[animation-play-state:paused] pr-4">
+      <div className="flex h-8 items-center bg-gradient-to-r from-[#e8c547] via-yellow-300 to-[#e8c547] text-black font-bold text-xs md:text-sm tracking-wide border-b border-white/10">
+        <Marquee speed={60} gradient={false} pauseOnHover={true}>
           {content}
-        </div>
-        <div className="animate-marquee inline-block hover:[animation-play-state:paused] pr-4" aria-hidden="true">
-          {content}
-        </div>
+        </Marquee>
       </div>
     </div>
   );
