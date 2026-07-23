@@ -20,7 +20,7 @@ export function AnnouncementBar() {
     <div className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full shadow-lg">
       {/* STATIC FRIDAY OFFER - ALWAYS VISIBLE */}
       <div className="bg-red-600 text-white font-extrabold text-sm md:text-base py-1.5 px-4 text-center border-b-2 border-yellow-400 tracking-wider">
-        🔥 EVERY FRIDAY SALE: Get 50% OFF on ANY plan you choose if your event is on a Friday! 💥
+        🔥 EVERY FRIDAY OFFER: Get 50% OFF on ANY plan you choose if your event is on a Friday! 💥
       </div>
       
       {/* SCROLLING MARQUEE */}

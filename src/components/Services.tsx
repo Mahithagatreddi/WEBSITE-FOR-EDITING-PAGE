@@ -23,7 +23,7 @@ export function Services() {
             <span className="text-3xl animate-bounce">🔥</span>
             <div>
               <p className="font-[family-name:var(--font-syne)] font-bold uppercase tracking-widest text-sm text-red-400">
-                Every Friday Sale
+                Every Friday Offer
               </p>
               <p className="text-sm text-white mt-1">
                 Get <span className="font-bold text-red-400 text-base">50% OFF</span> on ANY plan you choose if your event is on a Friday! 💥
