@@ -17,6 +17,19 @@ export function Services() {
           <p className="mt-4 max-w-xl text-sm text-[#9a9590]">
             Choose a plan that fits your event. Message me on WhatsApp with your date and selected plan to get started.
           </p>
+
+          <div className="mt-8 inline-flex items-center gap-4 rounded-xl border border-red-500/50 bg-red-500/10 px-5 py-4 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.15)] backdrop-blur-sm relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 translate-x-[-100%] animate-[shimmer_2s_infinite]"></div>
+            <span className="text-3xl animate-bounce">🔥</span>
+            <div>
+              <p className="font-[family-name:var(--font-syne)] font-bold uppercase tracking-widest text-sm text-red-400">
+                Every Friday Sale
+              </p>
+              <p className="text-sm text-white mt-1">
+                Get <span className="font-bold text-red-400 text-base">50% OFF</span> on ANY plan you choose if your event is on a Friday! 💥
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-16">
