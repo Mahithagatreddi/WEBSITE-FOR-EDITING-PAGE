@@ -24,7 +24,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-10 left-0 right-0 z-40 transition-all duration-300",
+        "fixed top-16 left-0 right-0 z-40 transition-all duration-300",
         scrolled
           ? "bg-[#0a0a0b]/90 backdrop-blur-md border-b border-white/5 py-3"
           : "bg-transparent py-5"
